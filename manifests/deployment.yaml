@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+      - name: node-app
+        image: CONTAINER_IMAGE
+        ports:
+        - containerPort: 8080
+        env:
+        - name: AWS_XRAY_DAEMON_ADDRESS
+          value: "10.100.222.158:2000"
