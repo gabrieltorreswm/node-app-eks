@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:lts
 
 ENV AWS_XRAY_DAEMON_ADDRESS=10.100.222.158:2000
 
