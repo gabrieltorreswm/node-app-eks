@@ -1,11 +1,7 @@
 var express     = require('express');
 var app         = express();
 var bodyParser  = require('body-parser');
-var mathsolver  = require("./mathsolver.js");
-var calcmetrics = require("./calcmetrics.js");
 var xray        = require('aws-xray-sdk');
-var querystring = require('querystring');
-var shortid     = require('shortid');
 
 var serviceName = "CALCULATOR";
 var servicePort = 8080;
