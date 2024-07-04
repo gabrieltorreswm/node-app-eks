@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-app-deployment-notification
-  namespaces: notification
+  namespace: notification
 
 spec:
   replicas: 2
