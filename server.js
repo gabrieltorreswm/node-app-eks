@@ -44,11 +44,6 @@ console.log("********************************************");
 console.log("********************************************");
 console.log("sample calculator test commands:");
 console.log(`${exampleExpression1}`);
-console.log(`${exampleExpression2}`);
-console.log(`${exampleExpression3}`);
-console.log(`${exampleExpression4}`);
-console.log(`${exampleExpression5}`);
-console.log(`${exampleExpression6}`);
 console.log("note: the optional calcid param will be added as an annotation to the xray trace")
 console.log("********************************************");
 console.log("********************************************");
