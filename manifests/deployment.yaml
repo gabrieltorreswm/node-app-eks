@@ -31,7 +31,7 @@ metadata:
   namespace: notification
 spec:
   selector:
-    app: node-app-notification
+    app: node-app-service-notification
   ports:
   - protocol: UDP
     port: 2000
