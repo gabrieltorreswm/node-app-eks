@@ -3,7 +3,7 @@ var app         = express();
 var bodyParser  = require('body-parser');
 var xray        = require('aws-xray-sdk');
 
-var serviceName = "NOTIFICATION";
+var serviceName = "CALCULATOR";
 var servicePort = 8080;
 
 xray.middleware.setSamplingRules('sampling-rules.json');
@@ -24,7 +24,7 @@ var router = express.Router();
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: `welcome from the ${serviceName} service` });
+    res.json({ message: `welcome from the ${serviceName} service CALCULATOR` });
 });
 
 // REGISTER OUR ROUTES -------------------------------
