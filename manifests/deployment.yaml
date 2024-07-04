@@ -1,22 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-deployment
+  name: node-app-deployment-notification
+  namespaces: notification
+
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: node-app-notification
   template:
     metadata:
       labels:
-        app: node-app
+        app: node-app-notification
     spec:
       containers:
-      - name: node-app
+      - name: node-app-notification
         image: CONTAINER_IMAGE
         ports:
         - containerPort: 8080
         env:
         - name: AWS_XRAY_DAEMON_ADDRESS
           value: "10.100.222.158:2000"
+---
+# k8s services
+# kind: Service
+# metadata:
+#   name: xray-daemon-service
+# spec:
+#   selector:
+#     app: xray-daemon
+#   ports:
+#   - protocol: UDP
+#     port: 2000
+#     targetPort: 2000
+#   type: ClusterIP

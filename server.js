@@ -3,7 +3,7 @@ var app         = express();
 var bodyParser  = require('body-parser');
 var xray        = require('aws-xray-sdk');
 
-var serviceName = "CALCULATOR";
+var serviceName = "NOTIFICATION";
 var servicePort = 8080;
 
 xray.middleware.setSamplingRules('sampling-rules.json');
