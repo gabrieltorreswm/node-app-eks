@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-app-notification
+      app: node-app-service-notification
   template:
     metadata:
       labels:
-        app: node-app-notification
+        app: node-app-service-notification
     spec:
       containers:
       - name: node-app-notification
